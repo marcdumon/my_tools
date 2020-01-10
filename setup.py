@@ -7,7 +7,7 @@ https://github.com/pypa/sampleproject
 
 
 # Always prefer setuptools over distutils
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages, __version__
 # To use a consistent encoding
 from codecs import open
 from os import path
@@ -22,7 +22,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 # Fields marked as "Optional" may be commented out.
 
 # https://stackoverflow.com/questions/458550/standard-way-to-embed-version-into-python-package/16084844#16084844
-exec(open('version.py').read())
+exec(open('my_tools/version.py').read())
 setup(
     # This is the name of your project. The first time you publish this
     # package, this name will be registered for you. It will determine how
@@ -43,7 +43,7 @@ setup(
     # For a discussion on single-sourcing the version across setupxxx.py and the
     # project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version='__version__',  # Required
+    version=__version__,  # Required
 
     # This is a one-line description or tagline of what your project does. This
     # corresponds to the "Summary" metadata field:
