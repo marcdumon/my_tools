@@ -9,13 +9,13 @@ from copy import deepcopy
 import numpy as np
 import pandas as pd
 import torch as th
-from ai_template.my_tools.python_tools import print_file
-from sklearn.model_selection import train_test_split
-from torch.autograd import Variable
-from torch.utils.tensorboard import SummaryWriter
-import torchvision as thv
 import torch.nn as nn
-# from .python_tools import print_file
+import torchvision as thv
+from sklearn.model_selection import train_test_split
+from torch.utils.tensorboard import SummaryWriter
+
+from my_tools.python_tools import print_file
+
 
 
 # MODELS

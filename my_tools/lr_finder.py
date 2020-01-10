@@ -7,14 +7,14 @@
 # Source:https://github.com/davidtvs/pytorch-lr-finder
 
 from __future__ import print_function, with_statement, division
+
 import copy
 import os
-import torch
-from matplotlib import ticker
-from tqdm.autonotebook import tqdm
-from torch.optim.lr_scheduler import _LRScheduler
+
 import matplotlib.pyplot as plt
-import matplotlib.ticker as plticker
+import torch
+from torch.optim.lr_scheduler import _LRScheduler
+from tqdm.autonotebook import tqdm
 
 try:
     from apex import amp

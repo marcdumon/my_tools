@@ -8,8 +8,9 @@
 
 from collections import namedtuple
 from distutils.version import LooseVersion
-from graphviz import Digraph
+
 import torch
+from graphviz import Digraph
 from torch.autograd import Variable
 
 Node = namedtuple('Node', ('name', 'inputs', 'attr', 'op'))

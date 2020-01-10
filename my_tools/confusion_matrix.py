@@ -20,12 +20,12 @@ REFerences:
   http://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html#sphx-glr-auto-examples-model-selection-plot-confusion-matrix-py
 """
 
-from pandas import DataFrame
-import numpy as np
-import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
-from matplotlib.collections import QuadMesh
+import matplotlib.pyplot as plt
+import numpy as np
 import seaborn as sn
+from matplotlib.collections import QuadMesh
+from pandas import DataFrame
 
 
 def get_new_fig(fn, figsize=None):
