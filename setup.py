@@ -1,10 +1,10 @@
 from __future__ import print_function, division, absolute_import
+
 """A setuptools based setup module.
 See:
 https://packaging.python.org/en/latest/distributing.html
 https://github.com/pypa/sampleproject
 """
-
 
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages, __version__
@@ -120,7 +120,7 @@ setup(
     #
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    # install_requires=['torch', 'torchvision', 'munch', 'tqdm', 'matplotlib', 'seaborn', 'pandas'],  # Optional
+    install_requires=['torch', 'torchvision', 'munch', 'tqdm', 'matplotlib', 'seaborn', 'pandas', 'scikit-learn', 'numpy', 'graphviz'],  # Optional
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). Users will be able to install these using the "extras"
@@ -149,7 +149,7 @@ setup(
     # http://docs.python.org/3.4/distutils/setupscript.html#installing-additional-files
     #
     # In this case, 'data_file' will be installed into '<sys.prefix>/my_data'
-    #data_files=[('my_data', ['data/data_file'])],  # Optional
+    # data_files=[('my_data', ['data/data_file'])],  # Optional
 
     # To provide executable scripts, use entry points in preference to the
     # "scripts" keyword. Entry points provide cross-platform support and allow
@@ -163,4 +163,4 @@ setup(
     #         'sample=sample:main',
     #     ],
     # },
-)# Template from ~/Template/setupxxx.py
+)  # Template from ~/Template/setupxxx.py
