@@ -64,15 +64,15 @@ setup(
     #
     # This field corresponds to the "Home-Page" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#home-page-optional
-    url='https://github.com/cadene/pretrained-models.pytorch',  # Optional
+    url='https://github.com/marcdumon/my_tools',  # Optional
 
     # This should be your name or the name of the organization which owns the
     # project.
-    author='Remi Cadene',  # Optional
+    author='Marc Dumon',  # Optional
 
     # This should be a valid email address corresponding to the author listed
     # above.
-    author_email='remi.cadene@icloud.com',  # Optional
+    author_email='dumon.marc@gmail.com',  # Optional
 
     # Classifiers help users find your project by categorizing it.
     #
@@ -86,22 +86,22 @@ setup(
         'Development Status :: 3 - Alpha',
 
         # Indicate who your project is intended for
-        'Intended Audience :: Developers',
-        'Topic :: Software Development :: Build Tools',
+        # 'Intended Audience :: Developers',
+        # 'Topic :: Software Development :: Build Tools',
 
         # Pick your license as you wish
-        'License :: OSI Approved :: MIT License',
+        # 'License :: OSI Approved :: MIT License',
 
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate whether you support Python 2, Python 3 or both.
-        'Programming Language :: Python :: 3.6',
+        # 'Programming Language :: Python :: 3.6',
     ],
 
     # This field adds keywords for your project which will appear on the
     # project page. What does your project relate to?
     #
     # Note that this is a string of words separated by whitespace, not a list.
-    keywords='pytorch pretrained models deep learning',  # Optional
+    # keywords='pytorch pretrained models deep learning',  # Optional
 
     # You can just specify package directories manually here if your project is
     # simple. Or you can use find_packages().
@@ -112,7 +112,7 @@ setup(
     #
     #   py_modules=["my_module"],
     #
-    packages=find_packages(exclude=['data', 'examples']),  # Required
+    packages=find_packages(exclude=[]),  # Required
 
     # This field lists other packages that your project depends on to run.
     # Any package you put here will be installed by pip when your project is
@@ -120,7 +120,7 @@ setup(
     #
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    install_requires=['torch', 'torchvision', 'munch', 'tqdm', 'matplotlib', 'seaborn', 'pandas'],  # Optional
+    # install_requires=['torch', 'torchvision', 'munch', 'tqdm', 'matplotlib', 'seaborn', 'pandas'],  # Optional
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). Users will be able to install these using the "extras"
