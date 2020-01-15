@@ -72,7 +72,7 @@ def show_mpl_grid(images, titles=None, figsize=(10, 7), gridshape=(0, 0), cm='gr
     """
 
     # Matplotlib needs grayscal images of shape (M,N), not (M,N,1)
-    if images.shape[-1] == 1: images = images[:, :, :, 0]
+    # if images.shape[-1] == 1: images = images[:, :, :, 0]
     # Todo:
     '''
     Traceback (most recent call last):
