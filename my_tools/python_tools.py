@@ -70,8 +70,18 @@ def show_mpl_grid(images, titles=None, figsize=(10, 7), gridshape=(0, 0), cm='gr
     Returns:
         Shows a matplotlib grig of images
     """
+
     # Matplotlib needs grayscal images of shape (M,N), not (M,N,1)
     if images.shape[-1] == 1: images = images[:, :, :, 0]
+    # Todo:
+    '''
+    Traceback (most recent call last):
+        File "/media/md/Development/My_Projects/experiments_mnist/src/filter_visualisation.py", line 136, in <module>
+        show_mpl_grid(images)
+        File "/home/md/Miniconda3/envs/ai/lib/python3.7/site-packages/my_tools/python_tools.py", line 73, in show_mpl_grid
+        if images.shape[-1] == 1: images = images[:, :, :, 0]
+    AttributeError: 'list' object has no attribute 'shape'
+    '''
     if gridshape == (0, 0):
         l = len(images)
         r = int(sqrt(l))
@@ -82,6 +92,16 @@ def show_mpl_grid(images, titles=None, figsize=(10, 7), gridshape=(0, 0), cm='gr
         ax = plt.subplot(gridshape[0], gridshape[1], 1 + i)
         ax.imshow(images[i], cmap=cm)
         if titles.any():
+            # Todo:
+            '''
+            Traceback (most recent call last):
+                File "/media/md/Development/My_Projects/experiments_mnist/src/filter_visualisation.py", line 136, in <module>
+                show_mpl_grid(images)
+                File "/home/md/Miniconda3/envs/ai/lib/python3.7/site-packages/my_tools/python_tools.py", line 83, in show_mpl_grid
+                if titles.any():
+            AttributeError: 'NoneType' object has no attribute 'any'
+            '''
+
             ax.title.set_text(titles[i])
     # plt.tight_layout(1.08)
     plt.show(block=False)
