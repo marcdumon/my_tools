@@ -122,6 +122,7 @@ def get_class_distribution(dataset):
 
 
 def get_mean_and_std2(dataset):  # Todo: remove because it loads full dataset in memory. Calculate per image
+    #                                    doesn't work if images are rectangualar and moi squares
     print('This method loads the full dataset in memeory !!!! ')
     imgs = [dataset[i][0] for i in range(len(dataset.data))]
     imgs = th.stack(imgs)
