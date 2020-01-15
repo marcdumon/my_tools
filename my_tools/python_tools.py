@@ -91,18 +91,7 @@ def show_mpl_grid(images, titles=None, figsize=(10, 7), gridshape=(0, 0), cm='gr
     for i in range(len(images)):
         ax = plt.subplot(gridshape[0], gridshape[1], 1 + i)
         ax.imshow(images[i], cmap=cm)
-        if titles.any():
-            # Todo:
-            '''
-            Traceback (most recent call last):
-                File "/media/md/Development/My_Projects/experiments_mnist/src/filter_visualisation.py", line 136, in <module>
-                show_mpl_grid(images)
-                File "/home/md/Miniconda3/envs/ai/lib/python3.7/site-packages/my_tools/python_tools.py", line 83, in show_mpl_grid
-                if titles.any():
-            AttributeError: 'NoneType' object has no attribute 'any'
-            '''
-
-            ax.title.set_text(titles[i])
+        if titles: ax.title.set_text(titles[i])
     # plt.tight_layout(1.08)
     plt.show(block=False)
     # plt.pause(2)
