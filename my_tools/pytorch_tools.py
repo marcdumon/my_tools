@@ -5,6 +5,7 @@
 # --------------------------------------------------------------------------------------------------------
 from collections import OrderedDict
 from copy import deepcopy
+from random import random
 
 import numpy as np
 import pandas as pd
@@ -16,6 +17,14 @@ from torch.utils.tensorboard import SummaryWriter
 
 from my_tools.python_tools import print_file
 
+
+def set_random_seed(seed):
+    # Reproducability problems with pooling (AdaptiveMaxPool2d, AdaptiveAvgPool2d, ...)
+    random.seed(seed)
+    np.random.seed(seed)
+    th.manual_seed(seed)
+    th.backends.cudnn.deterministic = True
+    th.backends.cudnn.benchmark = False
 
 
 # MODELS

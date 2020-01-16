@@ -16,12 +16,6 @@ import torch as th
 # COMMON
 
 
-def set_random_seed(seed):
-    random.seed(seed)
-    np.random.seed(seed)
-    th.manual_seed(seed)
-    th.backends.cudnn.deterministic = True
-    th.backends.cudnn.benchmark = False
 
 
 def now_str(pattern='yyyymmdd_hhmmss'):
