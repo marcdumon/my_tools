@@ -3,9 +3,9 @@
 # src - pytorch_tools.py
 # md
 # --------------------------------------------------------------------------------------------------------
+import random
 from collections import OrderedDict
 from copy import deepcopy
-from random import random
 
 import numpy as np
 import pandas as pd
@@ -23,6 +23,8 @@ def set_random_seed(seed):
     random.seed(seed)
     np.random.seed(seed)
     th.manual_seed(seed)
+    th.cuda.manual_seed(seed)
+    th.cuda.manual_seed_all(seed)  # for multiGPUs.
     th.backends.cudnn.deterministic = True
     th.backends.cudnn.benchmark = False
 
@@ -318,3 +320,7 @@ class DeNormalize(thv.transforms.Normalize):
 
     def __call__(self, tensor):
         return super().__call__(tensor.clone())
+
+
+if __name__ == '__main__':
+    set_random_seed(1)
